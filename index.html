@@ -4,9 +4,113 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
   <title>Weather Dashboard</title>
 </head>
 <body>
-  
+  <header>
+    <h1>Weather Dashboard</h1>
+  </header>
+
+  <main>
+    
+    <!-- left column -->
+
+    <!-- left container-->
+    <div>
+      <div> <!-- form input -->
+        <h3>search form</h3>
+        <form id="search-form">
+          <label class="form-label" for="city">City Name</label>
+          <input name="city" id="city" type="text" autofocus="true"/>
+          <button type="submit">Search City</button>
+        </form>
+      </div>
+
+      <div>
+        <p>Search history / local storage goes here</p>
+      </div>
+    </div>
+
+
+    <!-- right column-->
+
+    <!-- right container-->
+    <div> 
+
+      <div> <!-- Right - Top Box for city info -->
+        <div> <!-- City and date field-->
+          <h2>City Name - Date (top right)</h2>
+        </div>
+        <div> <!-- Temp info-->
+          <p>Temp</p>
+        </div>
+        <div> <!-- wind info-->
+          <p>wind</p>
+        </div>
+        <div> <!-- humidity info-->
+          <p>humidity</p>
+        </div>
+        <div> <!-- UV index info-->
+          <p>UV Index</p>
+        </div>
+      </div>
+
+
+      <!-- 5 day cards-->
+
+      <!-- right bottom container -->
+      <div> 
+        <div> <!-- forecast Header-->
+          <h2>5-Day Forecast</h2>
+        </div>
+
+        <div><!-- card #1-->
+          <h3>Date</h3>
+          <p>icon</p>
+          <p>temp</p>
+          <p>wind</p>
+          <p>humidty</p>
+        </div>
+
+        <div><!-- card #2-->
+          <h3>Date</h3>
+          <p>icon</p>
+          <p>temp</p>
+          <p>wind</p>
+          <p>humidty</p>
+        </div>
+
+        <div><!-- card #3-->
+          <h3>Date</h3>
+          <p>icon</p>
+          <p>temp</p>
+          <p>wind</p>
+          <p>humidty</p>
+        </div>
+
+        <div><!-- card #4-->
+          <h3>Date</h3>
+          <p>icon</p>
+          <p>temp</p>
+          <p>wind</p>
+          <p>humidty</p>
+        </div>
+
+        <div><!-- card #5-->
+          <h3>Date</h3>
+          <p>icon</p>
+          <p>temp</p>
+          <p>wind</p>
+          <p>humidty</p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
