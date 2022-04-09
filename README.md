@@ -36,7 +36,7 @@ THEN I am again presented with current and future conditions for that city
 
 ## Mock-Up
 
-<img src=.assets/images/ch-06-mock-up.png>
+<img src=./assets/images/ch-06-mock-up.png>
 
 ## Website
 
