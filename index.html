@@ -6,21 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  
-
   <title>Weather Dashboard</title>
 </head>
+
 <body>
-  <header>
+
+  <!-- Header-->
+  <header class="py-10 text-center">
     <h1>Weather Dashboard</h1>
   </header>
 
-  <main class="h-screen bg-zinc-300 p-16 grid grid-cols-4 grid-rows-3 gap-6">
+
+  <!-- main grid container -->
+  <div class="bg-zinc-300 p-4 m-4 grid grid-cols-4 grid-rows-2">
     
-    <!-- left Grid column -->
-    <div class="bg-stone-400 text-black py-4 rounded-lg col-span-1 row-span-4">
-      <div class="bg-sky-300 text-black py-4 rounded-lg col-span-3 row-span-2"> <!-- form input -->
-        <h3>search form</h3>
+    <!-- left grid search column-->
+    <div class="text-black p-10 rounded-lg col-span-1">
+      <div class="border-4 row-span-1">
+        <h2>Search</h2>
         <form id="search-form">
           <label class="form-label" for="city">City Name</label>
           <input name="city" id="city" type="text" autofocus="true"/>
@@ -28,17 +31,17 @@
         </form>
       </div>
 
-      <div class="bg-sky-600 text-black py-4 rounded-lg col-span-3 row-span-1">
+      <div class="border-4 my-8 row-span-1">
         <p>Search history / local storage goes here</p>
       </div>
     </div>
 
 
-    <!-- right Grid column-->
-    <div class="bg-stone-400 text-black py-4 rounded-lg col-span-3 row-span-4"> 
+    <!-- right Grid container-->
+    <div class="bg-stone-400 text-black p-10 rounded-lg col-span-3 row-span-2"> 
 
       <!-- Top right grid column-->
-      <div class="bg-cyan-600 text-black py-4 rounded-lg col-span-3 row-span-2">  <!-- Right - Top Box for city info -->
+      <div class="border-4 bg-cyan-600 text-black p-10 my-6 rounded-lg col-span-2 row-span-1">  <!-- Right - Top Box for city info -->
         <div> <!-- City and date field-->
           <h2>City Name - Date (top right)</h2>
         </div>
@@ -56,24 +59,23 @@
         </div>
       </div>
 
+      <!-- 5-Day Forecast Header-->
+      <div class="inline-block text-lg">
+        <h2>5-Day Forecast</h2>
+      </div>
 
-     
-
-      <!-- bottom right grid column / 5-day cards -->
-      <div class="bg-indigo-300 text-black py-4 rounded-lg col-span-3 row-span-2"> 
-        <div> <!-- forecast Header-->
-          <h2>5-Day Forecast</h2>
-        </div>
-
+      <!-- 5-day cards (bottom right) --> 
+      <div class="border-4 grid grid-cols-6 row-span-1">
+  
         <div><!-- card #1-->
-          <h3>Date#1</h3>
+          <h3 class="text-lg-mb-2">Date#1</h3>
           <!-- <p>icon</p>
           <p>temp</p>
-          <p>wind</p>
-          <p>humidty</p> -->
+          <p>wind</p> -->
+          <p class="font-light text-sm">humidty</p>
         </div>
 
-        <div><!-- card #2-->
+        <div class="bg-indigo-300 text-black py-4 rounded-lg col-span-1 row-span-1"><!-- card #2-->
           <h3>Date#2</h3>
           <!-- <p>icon</p>
           <p>temp</p>
@@ -81,7 +83,7 @@
           <p>humidty</p> -->
         </div>
 
-        <div><!-- card #3-->
+        <div class="bg-indigo-300 text-black py-4 rounded-lg col-span-1 row-span-1"><!-- card #3-->
           <h3>Date#3</h3>
           <!-- <p>icon</p>
           <p>temp</p>
@@ -89,7 +91,7 @@
           <p>humidty</p> -->
         </div>
 
-        <div><!-- card #4-->
+        <div class="bg-indigo-300 text-black py-4 rounded-lg col-span-1 row-span-1"><!-- card #4-->
           <h3>Date#4</h3>
           <!-- <p>icon</p>
           <p>temp</p>
@@ -97,20 +99,16 @@
           <p>humidty</p> -->
         </div>
 
-        <div><!-- card #5-->
+        <div class="bg-indigo-300 text-black py-4 rounded-lg col-span-1 row-span-1"><!-- card #5-->
           <h3>Date#5</h3>
           <!-- <p>icon</p>
           <p>temp</p>
           <p>wind</p>
           <p>humidty</p> -->
         </div>
-      </div>
-      
     </div>
-
-  </main>
-
-  <script src="./assets/js/script.js"></script>
+  </div>
+  <script src="./assets/js/fetch.js"></script>
 </body>
 
 </html>
