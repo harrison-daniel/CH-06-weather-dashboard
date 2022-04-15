@@ -25,120 +25,81 @@
     
     <!-- left grid search column-->
     <div class="text-black p-2 m-2 rounded-lg col-span-1">
-      <div class="h-full border-4 row-span-1 rounded-lg">
+
+      <!-- Search input container-->
+      <div id="searchContainer" class="h-full border-4 row-span-1 rounded-lg">
         <h2 class="text-2xl font-bold p-6">Search for a City:</h2>
-        <input type="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-          <button type="button" id="search-button" class="btn inline-block px-4 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center">
+          <input id="cityInput" type="text" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+          <button id="searchButton" type="button" class="btn inline-block px-4 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center">  
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
             </svg>
           </button>
       </div>
+
 
           <!-- simple button HTML without logo-->
           <!-- <input name="city" id="city" type="text" autofocus="true" class="border-4" />
           <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search City</button> -->
 
-
-      <div class="border-4 my-8 row-span-1">
-        <p>Search history / local storage goes here</p>
+      <!-- Search History Div-->
+      <div id="history" class="border-4 my-8 row-span-1">
+        <p id="historyItem">Search history / local storage goes here</p>
       </div>
     </div>
 
 
     <!-- right Grid container-->
-    <div class="border-4 text-black p-4 m-2 rounded-lg col-span-3 row-span-2"> 
+    <div class="border-4 text-black p-2 m-2 rounded-lg col-span-3 row-span-2"> 
 
       <!-- Top right grid column-->
-      <div class="border-black border-2  text-black p-10 my-6 rounded-lg col-span-2 row-span-1">
-        <h2>City Name - Date (top right)</h2>
-        <p id="tempMain" class="">
-
-        </p>
-        <div> <!-- Temp info-->
-          <p>Temp</p>
-        </div>
-        <div> <!-- wind info-->
-          <p>wind</p>
-        </div>
-        <div> <!-- humidity info-->
-          <p>humidity</p>
-        </div>
-        <div> <!-- UV index info-->
-          <p>UV Index</p>
-        </div>
+      <div id="mainCard" class="border-black border-2 text-black p-4 mb-10 rounded-lg col-span-2 row-span-1">
+        <h2 id="mainCity" class="text-2xl font-bold">City </h2>
+        <img id="mainIcon" src="http://openweathermap.org/img/wn/10d@4x.png" class="h-20" alt="Weather Description" />
+          <p id="mainTemp">Temp</p>
+          <p id="mainWind">wind</p>
+          <p id="mainHumidity">humidity</p>
+          <p id="mainUV">UV Index</p>
       </div>
 
       <!-- Bottom Forecast Header-->
       <div class="inline-block text-lg">
-        <h2>5-Day Forecast</h2>
+        <h2 class="text-2xl font-bold">5-Day Forecast</h2>
       </div>
 
       <!-- 5-day cards  container (bottom right) --> 
-      <div class="border-4 grid grid-cols-5 row-span-1 p-2">
+      <div id="forecastContainer" class="border-4 grid grid-cols-5 row-span-1 p-2">
   
-       <!-- Card #1 -->
-        <div class="col-span-1 p-3 m-3 h-48 w-40 bg-sky-900 text-white">
-          <h3 class="text-2xl font-bold mb-4">Date#1</h3>
-          <!-- <p>icon</p> -->
-          <ul>
-            <li>Temp:</li>
-            <li>wind:</li>
-            <li>humidity:</li>
-          </ul>
+        <div id="forecastCard" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white">
+          <h3 id="forecastDate" class="text-lg font-bold mb-4">Date</h3>
+          <img id="forecastIcon" src="http://openweathermap.org/img/wn/10d@4x.png" class="h-20" alt="Weather Description" />
+          <div class="card-body">
+            <p id="forecastTemp" class="card-text text-sm">Temp:</p>
+            <p id="forecastWind" class="card-text text-sm">Wind:</p>
+            <p id="forecastHumidity" class="card-text text-sm">Humidity:</p>
+          </div>
+        </div> 
+
+      </div>
+
+
+      <div class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white">
+        <h3 class="text-lg font-bold mb-4">Date#6</h3>
+        <img src="http://openweathermap.org/img/wn/10d@4x.png" class="h-20" alt="Weather Description" />
+        <div class="card-body">
+          <h3 class="card-text text-sm">Date</h3>
+          <p class="card-text text-sm">Temp:</p>
+          <p class="card-text text-sm">Wind:</p>
+          <p class="card-text text-sm">Humidity:</p>
         </div>
-
-        <!-- Card #2 -->
-        <div class="col-span-1 p-3 m-3 h-48 w-40 bg-sky-900 text-white">
-          <h3 class="text-2xl font-bold mb-4">Date#2</h3>
-          <!-- <p>icon</p> -->
-          <ul>
-            <li>Temp:</li>
-            <li>wind:</li>
-            <li>humidity:</li>
-          </ul>
-        </div>
-
-        <!-- Card #3 -->
-        <div class="col-span-1 p-3 m-3 h-48 w-40 bg-sky-900 text-white">
-          <h3 class="text-2xl font-bold mb-4">Date#3</h3>
-          <!-- <p>icon</p> -->
-          <ul>
-            <li>Temp:</li>
-            <li>wind:</li>
-            <li>humidity:</li>
-          </ul>
-        </div>
-
-        <!-- Card #4 -->
-        <div class="col-span-1 p-3 m-3 h-48 w-40 bg-sky-900 text-white">
-          <h3 class="text-2xl font-bold mb-4">Date#4</h3>
-          <!-- <p>icon</p> -->
-          <ul>
-            <li>Temp:</li>
-            <li>wind:</li>
-            <li>humidity:</li>
-          </ul>
-        </div>
-
-        <!-- Card #5 -->
-        <div class="col-span-1 p-3 m-3 h-48 w-40 bg-sky-900 text-white">
-          <h3 class="text-2xl font-bold mb-4">Date#5</h3>
-          <!-- <p>icon</p> -->
-          <ul>
-            <li>Temp:</li>
-            <li>wind:</li>
-            <li>humidity:</li>
-          </ul>
-        </div>  
-
       </div>
 
     </div>
 
   </div>
-  
-  <script src="./assets/js/fetch.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 
