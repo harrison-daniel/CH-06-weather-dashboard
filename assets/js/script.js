@@ -82,7 +82,7 @@ var getCurrentWeather = function(cityInput) {
           // display current weather data in main card
           
 
-          mainCityEl.textContent = cityInput + " - " + date.toLocaleDateString("en-US");
+         citySearchHeaderEl.textContent = cityInput + " - " + date.toLocaleDateString("en-US");
           
           // var currentListItem = document.createElement('li');
 
@@ -119,6 +119,14 @@ var getCurrentWeather = function(cityInput) {
                   
 
                   mainUVEl.textContent = "UV Index: " + data.current.uvi;
+
+                  var forecast1 = document.createElement('div');
+                  forecast1.className = 'col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white';
+                  
+
+                  
+
+
                   
 
 
