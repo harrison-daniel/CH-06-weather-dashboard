@@ -54,7 +54,7 @@
 
       <!-- Top right grid column-->
       <div id="mainCard" class="border-black border-2 text-black p-4 mb-10 rounded-lg col-span-2 row-span-1">
-        <h2 id="mainCity" class="text-2xl font-bold"><span id="city-search-input"></span></h2>
+        <h2 id="mainCity" class="text-2xl font-bold"><span id="city-search-input">Showing Weather for:</span></h2>
         <img id="mainIcon" src="" class="h-20" />
           <!-- <ul id="currentCard"></ul> -->
           <p id="mainTemp">Temp:</p>
@@ -70,71 +70,61 @@
 
       <!-- 5-day cards  container (bottom right) --> 
       <div id="forecastContainer" class="border-4 grid grid-cols-5 row-span-1 p-2">
-  
-        <div id="forecastCard" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white flex-wrap">
-          <h3 id="forecastDate" class="text-lg font-bold mb-4">Date</h3>
-          <img id="forecastIcon" src="http://openweathermap.org/img/wn/10d@4x.png" class="h-20" alt="Weather Description" />
+
+        <!-- forecast card #1 -->
+        <div id="forecastCard1" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white flex-wrap">
+          <h3 id="forecastDate1" class="text-lg font-bold mb-4">Day 1</h3>
+          <img id="fIcon1" src="" class="h-20" />
+          <!-- <img id="forecastIcon1" src="" class="h-20" alt="Weather Description" /> -->
           <div class="card-body">
-            <p id="forecastTemp" class="card-text text-sm">Temp:</p>
-            <p id="forecastWind" class="card-text text-sm">Wind:</p>
-            <p id="forecastHumidity" class="card-text text-sm">Humidity:</p>
+            <p id="forecastTemp1" class="card-text text-sm">Temp:</p>
+            <p id="forecastWind1" class="card-text text-sm">Wind:</p>
+            <p id="forecastHumidity1" class="card-text text-sm">Humidity:</p>
           </div>
         </div> 
 
         <!-- forecast card #2 -->
         <div id="forecastCard2" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white flex-wrap">
-          <h3 id="forecastDate" class="text-lg font-bold mb-4">Date 2</h3>
-          <img id="forecastIcon" src="http://openweathermap.org/img/wn/10d@4x.png" class="h-20" alt="Weather Description" />
+          <h3 id="forecastDate2" class="text-lg font-bold mb-4">Day 2</h3>
+          <img id="fIcon2" src="" class="h-20" />
           <div class="card-body">
-            <p id="forecastTemp" class="card-text text-sm">Temp:</p>
-            <p id="forecastWind" class="card-text text-sm">Wind:</p>
-            <p id="forecastHumidity" class="card-text text-sm">Humidity:</p>
+            <p id="forecastTemp2" class="card-text text-sm">Temp:</p>
+            <p id="forecastWind2" class="card-text text-sm">Wind:</p>
+            <p id="forecastHumidity2" class="card-text text-sm">Humidity:</p>
           </div>
         </div>
 
-        <div id="forecastCard" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white flex-wrap">
-          <h3 id="forecastDate" class="text-lg font-bold mb-4">Date3 </h3>
-          <img id="forecastIcon" src="http://openweathermap.org/img/wn/10d@4x.png" class="h-20" alt="Weather Description" />
+        <div id="forecastCard3" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white flex-wrap">
+          <h3 id="forecastDate3" class="text-lg font-bold mb-4">Day 3</h3>
+          <img id="fIcon3" src="" class="h-20" />
           <div class="card-body">
-            <p id="forecastTemp" class="card-text text-sm">Temp:</p>
-            <p id="forecastWind" class="card-text text-sm">Wind:</p>
-            <p id="forecastHumidity" class="card-text text-sm">Humidity:</p>
+            <p id="forecastTemp3" class="card-text text-sm">Temp:</p>
+            <p id="forecastWind3" class="card-text text-sm">Wind:</p>
+            <p id="forecastHumidity3" class="card-text text-sm">Humidity:</p>
           </div>
         </div>
 
-        <div id="forecastCard" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white flex-wrap">
-          <h3 id="forecastDate" class="text-lg font-bold mb-4">Date 4</h3>
-          <img id="forecastIcon" src="http://openweathermap.org/img/wn/10d@4x.png" class="h-20" alt="Weather Description" />
+        <div id="forecastCard4" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white flex-wrap">
+          <h3 id="forecastDate4" class="text-lg font-bold mb-4">Day 4</h3>
+          <img id="fIcon4" src="" class="h-20" />
           <div class="card-body">
-            <p id="forecastTemp" class="card-text text-sm">Temp:</p>
-            <p id="forecastWind" class="card-text text-sm">Wind:</p>
-            <p id="forecastHumidity" class="card-text text-sm">Humidity:</p>
+            <p id="forecastTemp4" class="card-text text-sm">Temp:</p>
+            <p id="forecastWind4" class="card-text text-sm">Wind:</p>
+            <p id="forecastHumidity4" class="card-text text-sm">Humidity:</p>
           </div>
         </div>
 
-        <div id="forecastCard" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white flex-wrap">
-          <h3 id="forecastDate" class="text-lg font-bold mb-4">Date 5</h3>
-          <img id="forecastIcon" src="http://openweathermap.org/img/wn/10d@4x.png" class="h-20" alt="Weather Description" />
+        <div id="forecastCard5" class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white flex-wrap">
+          <h3 id="forecastDate5" class="text-lg font-bold mb-4">Day 5</h3>
+          <img id="fIcon5" src="" class="h-20" />
           <div class="card-body">
-            <p id="forecastTemp" class="card-text text-sm">Temp:</p>
-            <p id="forecastWind" class="card-text text-sm">Wind:</p>
-            <p id="forecastHumidity" class="card-text text-sm">Humidity:</p>
+            <p id="forecastTemp5" class="card-text text-sm">Temp:</p>
+            <p id="forecastWind5" class="card-text text-sm">Wind:</p>
+            <p id="forecastHumidity5" class="card-text text-sm">Humidity:</p>
           </div>
         </div>
 
       </div>
-
-
-      <!-- <div class="col-span-1 p-3 m-3 h-64 w-40 bg-sky-900 text-white">
-        <h3 class="text-lg font-bold mb-4">Date#6</h3>
-        <img src="http://openweathermap.org/img/wn/10d@4x.png" class="h-20" alt="Weather Description" />
-        <div class="card-body">
-          <h3 class="card-text text-sm">Date</h3>
-          <p class="card-text text-sm">Temp:</p>
-          <p class="card-text text-sm">Wind:</p>
-          <p class="card-text text-sm">Humidity:</p>
-        </div>
-      </div> -->
 
     </div>
 

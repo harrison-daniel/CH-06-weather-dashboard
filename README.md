@@ -15,10 +15,9 @@ SO THAT I can plan a trip accordingly
 ## Built With
 
 HTML
-CSS
-Bootstrap
+CSS, with Tailwind and Tailwind Elements
 jQuery
-OpenWeather One Call API
+OpenWeather API
 
 ## Acceptance Criteria
 
